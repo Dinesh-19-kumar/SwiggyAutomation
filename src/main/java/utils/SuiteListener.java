@@ -14,28 +14,28 @@ import base.BaseTest;
 public class SuiteListener implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
-	    String fileName = System.getProperty("user.dir")+File.separator+"pass"+File.separator+result.getMethod().getMethodName();
-	    
-	    File f1 = ((TakesScreenshot)BaseTest.getDriver()).getScreenshotAs(OutputType.FILE);
-	    
-	    try {
-	    	FileUtils.copyFile(f1, new File(fileName+".png"));
-	    }catch (IOException e) {
-	    	e.printStackTrace();
-	    }
-	  }
+		String fileName = System.getProperty("user.dir")+File.separator+"pass"+File.separator+result.getMethod().getMethodName();
+
+		File f1 = ((TakesScreenshot)BaseTest.getDriver()).getScreenshotAs(OutputType.FILE);
+
+		try {
+			FileUtils.copyFile(f1, new File(fileName+".png"));
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public void onTestFailure(ITestResult result) {
-	   
-	    String fileName = System.getProperty("user.dir")+File.separator+"fail"+File.separator+result.getMethod().getMethodName();
-	    
-	    File f1 = ((TakesScreenshot)BaseTest.getDriver()).getScreenshotAs(OutputType.FILE);
-	    
-	    try {
-	    	FileUtils.copyFile(f1, new File(fileName+".png"));
-	    }catch (IOException e) {
-	    	e.printStackTrace();
-	    }
-	  }
+
+		String fileName = System.getProperty("user.dir")+File.separator+"fail"+File.separator+result.getMethod().getMethodName();
+
+		File f1 = ((TakesScreenshot)BaseTest.getDriver()).getScreenshotAs(OutputType.FILE);
+
+		try {
+			FileUtils.copyFile(f1, new File(fileName+".png"));
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 }

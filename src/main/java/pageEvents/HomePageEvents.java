@@ -7,13 +7,13 @@ import base.BaseTest;
 import pageObject.HomePageElements;
 
 public class HomePageEvents extends BaseTest {
-	
+
 	public void clickSearchButton() {
-		
+
 		WebElement ele = driver.findElement(By.xpath(HomePageElements.searchButton));
 		ele.click();
-			
+
 	}
-	
-		
+
+
 }

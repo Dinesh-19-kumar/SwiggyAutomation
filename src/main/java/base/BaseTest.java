@@ -52,7 +52,7 @@ public class BaseTest {
 
 	@BeforeMethod
 	public void beforeMethod(Method testMethod) {
-		
+
 		extent = extentRep.createTest(testMethod.getName());
 		getDriver();
 		driver.manage().window().maximize();
@@ -64,25 +64,25 @@ public class BaseTest {
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
-		
+
 		if (result.getStatus() == ITestResult.SUCCESS) {
-            extent.log(Status.PASS,MarkupHelper.createLabel(result.getName()+" "+ "Test passed",ExtentColor.GREEN));
-        } else if (result.getStatus() == ITestResult.FAILURE) {
-        	extent.log(Status.FAIL,MarkupHelper.createLabel(result.getName()+" "+ "Test failed",ExtentColor.RED));
-        } else if (result.getStatus() == ITestResult.SKIP) {
-        	extent.log(Status.SKIP,MarkupHelper.createLabel(result.getName()+" "+ "Test skipped",ExtentColor.ORANGE));
-        }
+			extent.log(Status.PASS,MarkupHelper.createLabel(result.getName()+" "+ "Test passed",ExtentColor.GREEN));
+		} else if (result.getStatus() == ITestResult.FAILURE) {
+			extent.log(Status.FAIL,MarkupHelper.createLabel(result.getName()+" "+ "Test failed",ExtentColor.RED));
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			extent.log(Status.SKIP,MarkupHelper.createLabel(result.getName()+" "+ "Test skipped",ExtentColor.ORANGE));
+		}
 	}
 
 	@AfterTest
 	public void afterTest() {
-		
+
 		driver.quit();
 		extentRep.flush();
 	}
 
-	
-	
+
+
 
 	public static WebDriver getDriver() {
 

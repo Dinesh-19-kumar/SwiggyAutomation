@@ -16,7 +16,7 @@ public class LoadedPageEvents extends BaseTest {
 
 		Assert.assertNotNull(searchButton, "Search button is not displayed");
 	}
-	
+
 	public void searchPageLoaded() {
 
 		WebElement searchbar = driver.findElement(By.xpath(LoadedPageElements.searchBar));
@@ -37,14 +37,14 @@ public class LoadedPageEvents extends BaseTest {
 
 		Assert.assertNotNull(searchbar, "Search bar is not displayed");
 	}
-	
+
 	public void restPageLoaded() {
 
 		WebElement searchbar = driver.findElement(By.xpath(LoadedPageElements.selectRest));
 
 		Assert.assertNotNull(searchbar, "Search bar is not displayed");
 	}
-	
+
 	public void menuPageLoaded() {
 
 		WebElement searchbar = driver.findElement(By.xpath(LoadedPageElements.menuBar));
