@@ -8,5 +8,5 @@
     <classes>
       <class name="test.NewTest001"/>
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- Test --> 
 </suite> <!-- Suite -->

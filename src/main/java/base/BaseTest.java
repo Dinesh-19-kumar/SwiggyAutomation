@@ -73,7 +73,7 @@ public class BaseTest {
 			extent.log(Status.SKIP,MarkupHelper.createLabel(result.getName()+" "+ "Test skipped",ExtentColor.ORANGE));
 		}
 	}
-
+	
 	@AfterTest
 	public void afterTest() {
 
